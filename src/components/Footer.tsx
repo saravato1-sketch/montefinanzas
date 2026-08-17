@@ -13,7 +13,7 @@ export default function Footer() {
         <p className="text-[11px] text-slate-400">Síguenos en Instagram</p>
         <div className="flex items-center gap-4">
           {SOCIALS.map((s) => (
-            
+            <a
               key={s.href}
               href={s.href}
               target="_blank"
