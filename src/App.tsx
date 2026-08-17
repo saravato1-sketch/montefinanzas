@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Sidebar from '@/components/Sidebar';
+import Footer from '@/components/Footer';
 import Welcome from '@/components/Welcome';
 import Inicio from '@/components/sections/Inicio';
 import Mercado from '@/components/sections/Mercado';
@@ -58,6 +59,7 @@ export default function App() {
           {section === 'retos' && <Retos state={state} onCompleteChallenge={completeChallenge} />}
           {section === 'galeria' && <Galeria />}
           {section === 'perfil' && <Perfil state={state} onChangeStudent={changeStudent} />}
+          <Footer />
         </main>
       </div>
     </div>
