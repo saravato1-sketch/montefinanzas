@@ -150,7 +150,9 @@ export default function Simula({ state, onUpdateSim, onAddBadge }: SimulaProps) 
             </button>
           </div>
         </div>
-        <Sparkline data={state.simHistory.map((h) => h.value)} color={profit >= 0 ? '#10b981' : '#f43f5e'} width={600} height={80} />
+                <div className="w-full overflow-hidden">
+          <Sparkline data={state.simHistory.map((h) => h.value)} color={profit >= 0 ? '#10b981' : '#f43f5e'} width={600} height={80} responsive />
+        </div>
       </div>
 
       {/* Assets */}
