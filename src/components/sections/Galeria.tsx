@@ -7,6 +7,16 @@ interface Photo {
 }
 
 const PHOTOS: Photo[] = [
+  { src: '/assets/gallery/foto4.jpg', caption: 'Bienvenida al evento Bolsa Millonaria' },
+  { src: '/assets/gallery/foto5.jpg', caption: 'El auditorio lleno para el lanzamiento' },
+  { src: '/assets/gallery/foto6.jpg', caption: 'Charla: El poder de las inversiones' },
+  { src: '/assets/gallery/foto7.jpg', caption: 'Presentación sobre educación financiera' },
+  { src: '/assets/gallery/foto8.jpg', caption: 'Conferencista compartiendo su experiencia' },
+  { src: '/assets/gallery/foto9.jpg', caption: 'Estudiantes participando en el evento' },
+  { src: '/assets/gallery/foto10.jpg', caption: 'El Juego del Náufrago en vivo' },
+  { src: '/assets/gallery/foto2.jpg', caption: 'Registro de asistentes' },
+  { src: '/assets/gallery/foto3.jpg', caption: 'Estudiantes explorando la pantalla interactiva' },
+  { src: '/assets/gallery/foto1.jpg', caption: 'Momento especial con la mascota de Bolsa Millonaria' },
   { src: '/assets/gallery/IMG_9888.jpg', caption: 'Presentación del proyecto Bolsa Millonaria' },
   { src: '/assets/gallery/IMG_9872.jpg', caption: 'Estudiantes participando en la actividad' },
   { src: '/assets/gallery/IMG_9909.jpg', caption: 'Momento destacado del evento' },
