@@ -4,9 +4,10 @@ interface SparklineProps {
   width?: number;
   height?: number;
   fill?: boolean;
+  responsive?: boolean;
 }
 
-export default function Sparkline({ data, color = '#0ea5e9', width = 120, height = 36, fill = true }: SparklineProps) {
+export default function Sparkline({ data, color = '#0ea5e9', width = 120, height = 36, fill = true, responsive = false }: SparklineProps) {
   if (!data || data.length < 2) return null;
   const min = Math.min(...data);
   const max = Math.max(...data);
@@ -21,7 +22,13 @@ export default function Sparkline({ data, color = '#0ea5e9', width = 120, height
   const areaPath = `${path} L ${width} ${height} L 0 ${height} Z`;
   const id = `spark-${color.replace('#', '')}`;
   return (
-    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible" preserveAspectRatio="none">
+    <svg
+      width={responsive ? undefined : width}
+      height={responsive ? undefined : height}
+      viewBox={`0 0 ${width} ${height}`}
+      className={responsive ? 'w-full h-auto overflow-visible block' : 'overflow-visible shrink-0'}
+      preserveAspectRatio={responsive ? 'none' : undefined}
+    >
       {fill && (
         <>
           <defs>
