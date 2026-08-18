@@ -21,7 +21,7 @@ export default function Sparkline({ data, color = '#0ea5e9', width = 120, height
   const areaPath = `${path} L ${width} ${height} L 0 ${height} Z`;
   const id = `spark-${color.replace('#', '')}`;
   return (
-    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="overflow-visible">
+    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible" preserveAspectRatio="none">
       {fill && (
         <>
           <defs>
